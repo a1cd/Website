@@ -1,0 +1,26 @@
+:root {
+    --first: #071a40;
+    --second: #0d518c;
+    --third: #0f8dbf;
+    --fourth: #72cef2;
+    --fifth: #f2d338;
+}
+* {
+    font-family: 'San Francisco', Helvetica, Arial, san-serif;
+    margin: 0;
+}
+.title {
+    text-align: center;
+    color: white;
+    flood-color: var(--first);
+    padding: 1cm;
+    margin: 0;
+    background-color: var(--first);
+    filter: blur(100);
+    box-shadow: black;
+}
+.subtitle {
+    color: white;
+    padding: 4mm;
+    background-color: var(--second);
+}
