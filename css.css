@@ -68,7 +68,7 @@
         perspective: 40px;
     }
   
-    .mouseImage{
+    #mouseImage{
         width: 20em;
         height: 18em;
         transform: rotateX(0) rotateY(0);
