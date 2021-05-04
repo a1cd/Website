@@ -69,8 +69,7 @@
     }
   
     #mouseImage{
-        width: 20em;
-        height: 18em;
+        width: 50rem;
         transform: rotateX(0) rotateY(0);
     }
 }
