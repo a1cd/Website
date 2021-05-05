@@ -33,8 +33,9 @@ function coolStuff(adder) {
     console.log("running")
     let Qualities = document.getElementById("Qualities");
     var quals = ["iOS", "Xcode", "SwiftUI", "Python", "Html", "CSS", "Javascript", "Swift"];
+    var qualsCopy = quals
     for (i in range(0,3)) {
-        var e = quals
+        var e = qualsCopy
         shuffle(e)
         quals = quals.concat(e)
     }
