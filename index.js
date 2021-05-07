@@ -12,8 +12,8 @@ function shuffle(array) {
     // While there remain elements to shuffle...
     while (0 !== currentIndex) {
 
-      // Pick a remaining element...
-      randomIndex = Math.floor(Math.random() * currentIndex);
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
         currentIndex -= 1;
 
         // And swap it with the current element.
@@ -35,7 +35,7 @@ function coolStuff(adder) {
     var quals = ["iOS", "Xcode", "SwiftUI", "Python", "Html", "CSS", "Javascript", "Swift"];
     var qualsCopy = quals
     for (i in range(0,3)) {
-        var e = qualsCopy
+        var e = qualsCopy 
         shuffle(e)
         quals = quals.concat(e)
     }
@@ -75,4 +75,8 @@ function coolStuff(adder) {
         }, 0);
     }
     // coolStuff(adder+quals.length)
+}
+function svgWaver(id: string) {
+    var svg = document.getElementById(id)
+    svg.style.off
 }
