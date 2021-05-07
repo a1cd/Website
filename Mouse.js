@@ -1,34 +1,25 @@
-function motion(event){
-    console.log("Accelerometer: "
-        + event.accelerationIncludingGravity.x + ", "
-        + event.accelerationIncludingGravity.y + ", "
-        + event.accelerationIncludingGravity.z
-    );
-}
-
-const isMobileDevice = () => {
-    const ua = navigator.userAgent;
-    if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
-        return "tablet";
-    }
-    if (
-        /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
-            ua
-        )
-    ) {
-        return true;
-    }
-    return false;
-};
 (function() {
+    console.log(navigator.userAgent);
+    const isMobileDevice = () => {
+        const ua = navigator.userAgent;
+        
+        if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+            return true;
+        }
+        if (/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
+            return true;
+        }
+        return false;
+    };
+    console.log(isMobileDevice)
     // Init
     var container = document.getElementById("imageHolder"),
         inner = document.getElementById("mouseImage");
     var orientaion = {
-        absolute,
-        alpha,
-        beta,
-        gamma,
+        // absolute,
+        // alpha,
+        // beta,
+        // gamma,
         handleOrientation: function(event) {
             this.absolute = event.absolute;
             this.alpha    = event.alpha;
@@ -45,8 +36,9 @@ const isMobileDevice = () => {
         x: 0,
         y: 0,
         updatePosition: function(event) {
-            if isMobileDevice {
-                orientaion
+            if (isMobileDevice()) {
+                this.x = orientaion.alpha;
+                this.y = orientaion.beta;
             } else {
                 var e = event || window.event;
                 this.x = e.clientX - this._x;
@@ -94,6 +86,7 @@ const isMobileDevice = () => {
     
     var onMouseEnterHandler = function(event) {
         update(event);
+        mouse.setOrigin(container);
     };
     
     var onMouseLeaveHandler = function() {
@@ -132,4 +125,12 @@ const isMobileDevice = () => {
     container.onmousemove = onMouseMoveHandler;
     container.onmouseleave = onMouseLeaveHandler;
     container.onmouseenter = onMouseEnterHandler;
+    let gyroscope = new Gyroscope({frequency: 60});
+
+    gyroscope.addEventListener('reading', e => {
+        console.log("Angular velocity along the X-axis " + gyroscope.x);
+        console.log("Angular velocity along the Y-axis " + gyroscope.y);
+        console.log("Angular velocity along the Z-axis " + gyroscope.z);
+    });
+    gyroscope.start();
 })();
