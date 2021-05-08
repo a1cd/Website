@@ -1,8 +1,30 @@
 @import url(//db.onlinewebfonts.com/c/88eb29785b94842f7b48a3050e2c96f9?family=Flux);
 @font-face {font-family: "Flux"; src: url("//db.onlinewebfonts.com/t/88eb29785b94842f7b48a3050e2c96f9.eot"); src: url("//db.onlinewebfonts.com/t/88eb29785b94842f7b48a3050e2c96f9.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/88eb29785b94842f7b48a3050e2c96f9.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/88eb29785b94842f7b48a3050e2c96f9.woff") format("woff"), url("//db.onlinewebfonts.com/t/88eb29785b94842f7b48a3050e2c96f9.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/88eb29785b94842f7b48a3050e2c96f9.svg#Flux") format("svg"); }
 
-.Python {
-  font-family: ;
+a.button6{
+   display:inline-block;
+   padding:0.7em 1.4em;
+   margin:0 0.3em 0.3em 0;
+   border-radius:0.15em;
+   box-sizing: border-box;
+   text-decoration:none;
+   font-family:'Roboto',sans-serif;
+   text-transform:uppercase;
+   font-weight:400;
+   color:#FFFFFF;
+   background-color:#3369ff;
+   box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
+   text-align:center;
+   position:fixed;
+  }
+  a.button6:active{
+   top:0.1em;
+  }
+  @media all and (max-width:30em){
+   a.button6{
+    display:block;
+    margin:0.4em auto;
+   }
 }
 * {
   font-family: 'SF Pro Text',-apple-system,BlinkMacSystemFont,Roboto,'Segoe UI',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
@@ -93,7 +115,7 @@
 .Transition {
   background-color: unset;
   background: unset;
-  bottom: -23px;
+  bottom: -30px;
   width: 100%;
   position: absolute;
 }

@@ -81,20 +81,26 @@ function coolStuff(adder) {
         image.setAttribute("src", element[0]);
         div.appendChild(image);
         div.appendChild(text);
+        var textHeight = text.height;
         var style = div.style;
         var imageStyle = image.style;
         style.padding = 0;
+        imageStyle.padding = 0;
         style.opacity = 0;
         style.transitionTimingFunction = "bounce";
         style.transition = "all 0.5s";
         style.transform = "translate(0," + String(distance) + "vw)";
         div.id = index;
         imageStyle.height = 0;
-        style.margin = 0; // image.style = style;
+        style.height = 0;
+        style.margin = 0;
+        imageStyle.margin = 0; // image.style = style;
 
         Qualities.appendChild(div);
         setTimeout(function () {
-          imageStyle.height = "10vw";
+          style.height = "100%";
+          imageStyle.height = "10vw"; // text.style.height = textHeight;
+
           style.paddingTop = "0px";
           style.opacity = "1";
           style.transform = "translate(0,0vw)"; // image.style = style;

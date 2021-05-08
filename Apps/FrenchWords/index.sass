@@ -7,15 +7,21 @@
     
 #Title
     color: azure
-    padding: 1em
+    padding: 1cm
+    @include center()
+    text-align: center
     font-size: 5em
 #Logo
     height: 15em
     border: clear
     border-width: 2px
     @include center()
+body
+    background: linear-gradient(royalblue 30vw 50vw, hotpink 50vw 1000000vw)
+
 *
     font-family: 'SF Pro Text',-apple-system,BlinkMacSystemFont,Roboto,'Segoe UI',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol'
+    transition: cubic-bezier(0.39, -0.11, 0.54, 1.22)
 #container
     background: linear-gradient(royalblue, cyan 100vh)
     min-height: 100vh
@@ -24,6 +30,9 @@
     padding: 5em
 @mixin statText
     color: white
+
+.spacingGroup
+    padding: 1em
 
 #stats
     background: hotpink
