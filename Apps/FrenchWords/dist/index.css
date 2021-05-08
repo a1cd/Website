@@ -50,18 +50,29 @@ body {
   flex-basis: auto;
   transition: "all 0.5s";
 }
-#stats div {
-  padding: 2em;
-}
 #stats p {
-  color: white;
+  background: linear-gradient(90deg, steelblue, dodgerblue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   word-wrap: break-word;
 }
 #stats h2 {
-  color: white;
+  background: linear-gradient(90deg, steelblue, dodgerblue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 #stats li {
-  color: white;
+  background: linear-gradient(90deg, steelblue, dodgerblue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#stats > div {
+  border-radius: 1vw;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  margin: 1vw;
+  padding: 1vw;
+  background: white;
 }
 
 #Download {

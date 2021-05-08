@@ -27,8 +27,11 @@ body
     padding: 0
 #titleArea
     padding: 5em
+
 @mixin statText
-    color: white
+    background: linear-gradient(90deg, steelblue, dodgerblue)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
 
 .spacingGroup
     padding: 1em
@@ -39,8 +42,6 @@ body
     display: flex
     flex-basis: auto
     transition: "all 0.5s"
-    div
-        padding: 2em
     p
         @include statText
         word-wrap: break-word
@@ -48,6 +49,12 @@ body
         @include statText
     li
         @include statText
+#stats > div
+    border-radius: 1vw
+    box-shadow: 3px 3px 10px rgba(0,0 ,0 ,0.3 )
+    margin: 1vw
+    padding: 1vw
+    background: white
 
 #Download
     color: grey
