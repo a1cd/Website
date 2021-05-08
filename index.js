@@ -74,20 +74,26 @@ function coolStuff(adder) {
             image.setAttribute("src",element[0])
             div.appendChild(image)
             div.appendChild(text)
+            var textHeight = text.height;
             let style = div.style;
-            let imageStyle = image.style
+            let imageStyle = image.style;
             style.padding = 0;
+            imageStyle.padding = 0;
             style.opacity = 0;
             style.transitionTimingFunction = "bounce";
             style.transition = "all 0.5s";
             style.transform = "translate(0,"+String(distance)+"vw)";
             div.id = index;
-            imageStyle.height = 0
-            style.margin = 0
+            imageStyle.height = 0;
+            style.height = 0;
+            style.margin = 0;
+            imageStyle.margin = 0;
             // image.style = style;
             Qualities.appendChild(div);
             setTimeout(() => {
+                style.height = "100%";
                 imageStyle.height = "10vw"
+                // text.style.height = textHeight;
                 style.paddingTop = "0px";
                 style.opacity = "1";
                 style.transform = "translate(0,0vw)";
