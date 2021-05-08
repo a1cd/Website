@@ -1,0 +1,50 @@
+#Title {
+  color: azure;
+  padding: 1em;
+  font-size: 5em;
+}
+
+#Logo {
+  height: 15em;
+  border: clear;
+  border-width: 2px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+#container {
+  background: linear-gradient(royalblue, cyan 100vh);
+  min-height: 100vh;
+  padding: 0;
+}
+
+#titleArea {
+  padding: 5em;
+}
+
+#stats {
+  background: hotpink;
+  flex-wrap: wrap;
+  display: flex;
+  flex-basis: auto;
+  transition: "all 0.5s";
+}
+#stats div {
+  padding: 2em;
+}
+#stats p {
+  color: white;
+  word-wrap: break-word;
+}
+#stats h2 {
+  color: white;
+}
+#stats li {
+  color: white;
+}
+
+#Download {
+  color: grey;
+}
