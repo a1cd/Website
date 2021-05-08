@@ -1,0 +1,44 @@
+
+@mixin center()
+    position: relative
+    top: 50%
+    left: 50%
+    transform: translate(-50%, 0)
+    
+#Title
+    color: azure
+    padding: 1em
+    font-size: 5em
+#Logo
+    height: 15em
+    border: clear
+    border-width: 2px
+    @include center()
+
+#container
+    background: linear-gradient(royalblue, cyan 100vh)
+    min-height: 100vh
+    padding: 0
+#titleArea
+    padding: 5em
+@mixin statText
+    color: white
+
+#stats
+    background: hotpink
+    flex-wrap: wrap
+    display: flex
+    flex-basis: auto
+    transition: "all 0.5s"
+    div
+        padding: 2em
+    p
+        @include statText
+        word-wrap: break-word
+    h2
+        @include statText
+    li
+        @include statText
+
+#Download
+    color: grey
