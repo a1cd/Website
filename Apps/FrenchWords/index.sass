@@ -6,18 +6,21 @@ html
     position: relative
     transform: translate(-50%, 0)
 #Title
+    text-overflow: fade
+    word-wrap: normal
+    min-width: 70%
     color: azure
     padding: 1vw
-    text-align: center
-    font-size: 15vw
+    text-align: left
+    font-size: xxx-large
 #Logo
-    max-width: 15vw
+    max-width: 25vw
     max-height: 40vh
     border: clear
     border-width: 2px
     border-radius: 15%
 body
-    background: linear-gradient(hotPink)
+    background: linear-gradient(royalblue -10% 50%,hotPink 50% 1000%)
 *
     font-family: 'SF Pro Text',-apple-system,BlinkMacSystemFont,Roboto,'Segoe UI',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol'
     transition: cubic-bezier(0.39, -0.11, 0.54, 1.22)
@@ -27,8 +30,9 @@ body
     padding: 0
     margin: 0
 #titleArea
-    padding: 10vw
-    max-width: 10em
+    padding: 5vw
+    min-width: 10em
+    max-width: 100vw
 
 @mixin statText
     background: linear-gradient(90deg, steelblue, dodgerblue)
@@ -54,8 +58,11 @@ body
     li
         @include statText
 
+$randomL: 0
 @mixin RandomPastel()
-    background-color: hsl((360 * random()),70%, 80%)
+    $random: (360 * random())
+    background-color: hsl($random,70%, 80%)
+    
 #stats > div
     font-size: 7mm
     padding: 1em

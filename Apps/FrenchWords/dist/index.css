@@ -7,14 +7,17 @@ html {
 }
 
 #Title {
+  text-overflow: fade;
+  word-wrap: normal;
+  min-width: 70%;
   color: azure;
   padding: 1vw;
-  text-align: center;
-  font-size: 15vw;
+  text-align: left;
+  font-size: xxx-large;
 }
 
 #Logo {
-  max-width: 15vw;
+  max-width: 25vw;
   max-height: 40vh;
   border: clear;
   border-width: 2px;
@@ -22,7 +25,7 @@ html {
 }
 
 body {
-  background: linear-gradient(hotPink);
+  background: linear-gradient(royalblue -10% 50%, hotPink 50% 1000%);
 }
 
 * {
@@ -38,8 +41,9 @@ body {
 }
 
 #titleArea {
-  padding: 10vw;
-  max-width: 10em;
+  padding: 5vw;
+  min-width: 10em;
+  max-width: 100vw;
 }
 
 .spacingGroup {
@@ -90,25 +94,25 @@ body {
   box-shadow: 0px 2.5px 0px 0px #f9f9fb, -1px 0 28px 0 rgba(0, 33, 81, 0.01), 54px 54px 28px -10px rgba(34, 33, 81, 0.15);
 }
 #stats > div:nth-child(1) {
-  background-color: #f0a8d7;
+  background-color: #baa8f0;
 }
 #stats > div:nth-child(2) {
-  background-color: #a8f0e9;
+  background-color: #a8c7f0;
 }
 #stats > div:nth-child(3) {
-  background-color: #f0a8d4;
+  background-color: #f0e6a8;
 }
 #stats > div:nth-child(4) {
-  background-color: #a8f0b7;
+  background-color: #f0a8ca;
 }
 #stats > div:nth-child(5) {
-  background-color: #d2f0a8;
+  background-color: #adf0a8;
 }
 #stats > div:nth-child(6) {
-  background-color: #f0a8dc;
+  background-color: #def0a8;
 }
 #stats > div:nth-child(7) {
-  background-color: #a8bbf0;
+  background-color: #f0a8b8;
 }
 
 #Download {
