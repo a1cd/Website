@@ -25,6 +25,7 @@ body
     background: linear-gradient(royalblue, cyan 100%)
     min-height: 100vh
     padding: 0
+    margin: 0
 #titleArea
     padding: 5em
 
@@ -42,6 +43,8 @@ body
     display: flex
     flex-basis: auto
     transition: "all 0.5s"
+    padding-bottom: 3em
+    padding-top: 3em
     p
         @include statText
         word-wrap: break-word
@@ -49,12 +52,34 @@ body
         @include statText
     li
         @include statText
+
 #stats > div
-    border-radius: 1vw
-    box-shadow: 3px 3px 10px rgba(0,0 ,0 ,0.3 )
-    margin: 1vw
-    padding: 1vw
-    background: white
+    padding: 1em
+    margin: 1.1em
+    transform: rotateX(51deg) rotateZ(20deg)
+    transform-style: preserve-3d
+    border-radius: 32px
+    box-shadow: 1px 1px 0 1px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01), 28px 28px 28px 0 rgba(34, 33, 81, 0.25)
+    transition: .4s ease-in-out transform, .4s ease-in-out box-shadow 
+    fillAssurance
+    &:hover 
+        transform: translate3d(0px, -16px, 0px) rotateX(42deg) rotateZ(0deg)
+        box-shadow: 0px 2.5px 0px 0px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01), 54px 54px 28px -10px rgba(34, 33, 81, 0.15)
+
+.r1
+    background-color: hsl((360 * random()),70%, 80%)
+.r2
+    background-color: hsl((360 * random()),70%, 80%)
+.r3
+    background-color: hsl((360 * random()),70%, 80%)
+.r4
+    background-color: hsl((360 * random()),70%, 80%)
+.r5
+    background-color: hsl((360 * random()),70%, 80%)
+.r6
+    background-color: hsl((360 * random()),70%, 80%)
+.r7
+    background-color: hsl((360 * random()),70%, 80%)
 
 #Download
     color: grey
