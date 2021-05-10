@@ -6,7 +6,7 @@
     transition: 0.6s ease all;
   }
   50% {
-    transform: translate3d(0px, 0px, -40px) perspective(2000px) rotateY(25deg) scale(1) rotateX(10deg);
+    transform: translate3d(0px, 0px, -40px) perspective(2000px) rotateY(250deg) scale(1) rotateX(-30deg);
     filter: blur(10px);
     opacity: 0.5;
     transition: 0.6s ease all;
@@ -45,10 +45,12 @@
   }
   50% {
     opacity: 0;
+    height: 100vh;
   }
   66% {
     opacity: 1;
     filter: blur(40px);
+    height: 100%;
   }
   100% {
     background: white;
@@ -73,10 +75,6 @@
     background-position: 0px 0px;
   }
 }
-html {
-  animation: 5s ease-out 0s 1 loadTransition;
-}
-
 body {
   animation: 5s ease-out 0s 1 loadTransitionBody;
   margin: 0;
@@ -141,23 +139,96 @@ body {
   flex-wrap: wrap;
   display: flex;
   flex-basis: content;
-  transition: "all 0.5s";
+  transition: all 1s;
+  transition-timing-function: 0, 0, 0, 1;
   padding-bottom: 3em;
   padding-top: 3em;
 }
 #stats p {
-  background: linear-gradient(90deg, steelblue, dodgerblue);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   word-wrap: break-word;
 }
+#stats p:nth-child(1) {
+  background: linear-gradient(90deg, RandomPastel(), RandomPastel());
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#stats p:nth-child(2) {
+  background: linear-gradient(90deg, RandomPastel(), RandomPastel());
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#stats p:nth-child(3) {
+  background: linear-gradient(90deg, RandomPastel(), RandomPastel());
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#stats p:nth-child(4) {
+  background: linear-gradient(90deg, RandomPastel(), RandomPastel());
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#stats p:nth-child(5) {
+  background: linear-gradient(90deg, RandomPastel(), RandomPastel());
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 #stats h2 {
-  background: linear-gradient(90deg, steelblue, dodgerblue);
+  background: linear-gradient(90deg, RandomPastel(), RandomPastel());
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#stats h2:nth-child(1) {
+  background: linear-gradient(90deg, RandomPastel(), RandomPastel());
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#stats h2:nth-child(2) {
+  background: linear-gradient(90deg, RandomPastel(), RandomPastel());
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#stats h2:nth-child(3) {
+  background: linear-gradient(90deg, RandomPastel(), RandomPastel());
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#stats h2:nth-child(4) {
+  background: linear-gradient(90deg, RandomPastel(), RandomPastel());
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#stats h2:nth-child(5) {
+  background: linear-gradient(90deg, RandomPastel(), RandomPastel());
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 #stats li {
-  background: linear-gradient(90deg, steelblue, dodgerblue);
+  background: linear-gradient(90deg, dogerblue, steelblue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#stats li:nth-child(1) {
+  background: linear-gradient(90deg, RandomPastel(), RandomPastel());
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#stats li:nth-child(2) {
+  background: linear-gradient(90deg, RandomPastel(), RandomPastel());
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#stats li:nth-child(3) {
+  background: linear-gradient(90deg, RandomPastel(), RandomPastel());
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#stats li:nth-child(4) {
+  background: linear-gradient(90deg, RandomPastel(), RandomPastel());
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#stats li:nth-child(5) {
+  background: linear-gradient(90deg, RandomPastel(), RandomPastel());
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -177,25 +248,25 @@ body {
   box-shadow: 0px 2.5px 0px 0px #f9f9fb, -1px 0 28px 0 rgba(0, 33, 81, 0.01), 54px 54px 28px -10px rgba(34, 33, 81, 0.15);
 }
 #stats > div:nth-child(1) {
-  background-color: #a8cef0;
+  background-color: #eaa8f0;
 }
 #stats > div:nth-child(2) {
-  background-color: #f0b5a8;
+  background-color: #f0a9a8;
 }
 #stats > div:nth-child(3) {
-  background-color: #a8f0cb;
+  background-color: #b5a8f0;
 }
 #stats > div:nth-child(4) {
-  background-color: #a8b6f0;
+  background-color: #a8bef0;
 }
 #stats > div:nth-child(5) {
-  background-color: #a8def0;
+  background-color: #dea8f0;
 }
 #stats > div:nth-child(6) {
-  background-color: #d1a8f0;
+  background-color: #f0c0a8;
 }
 #stats > div:nth-child(7) {
-  background-color: #eaa8f0;
+  background-color: #a8f0af;
 }
 
 #Download {
