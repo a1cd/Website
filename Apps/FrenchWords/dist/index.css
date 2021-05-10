@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+}
+
 #Title {
   color: azure;
   padding: 15mm;
@@ -71,6 +75,7 @@ body {
 }
 
 #stats > div {
+  font-size: 1cm;
   padding: 1em;
   margin: 1.1em;
   transform: rotateX(51deg) rotateZ(20deg);
@@ -78,38 +83,35 @@ body {
   border-radius: 32px;
   box-shadow: 1px 1px 0 1px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01), 28px 28px 28px 0 rgba(34, 33, 81, 0.25);
   transition: 0.4s ease-in-out transform, 0.4s ease-in-out box-shadow;
+  transition: opacity 10s;
+}
+#stats > div::before {
+  opacity: 0;
 }
 #stats > div:hover {
   transform: translate3d(0px, -16px, 0px) rotateX(42deg) rotateZ(0deg);
-  box-shadow: 0px 2.5px 0px 0px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01), 54px 54px 28px -10px rgba(34, 33, 81, 0.15);
+  box-shadow: 0px 2.5px 0px 0px #f9f9fb, -1px 0 28px 0 rgba(0, 33, 81, 0.01), 54px 54px 28px -10px rgba(34, 33, 81, 0.15);
 }
-
-.r1 {
-  background-color: #f0a8ce;
+#stats > div:nth-child(1) {
+  background-color: #a8aaf0;
 }
-
-.r2 {
-  background-color: #a8f0aa;
+#stats > div:nth-child(2) {
+  background-color: #a8f0de;
 }
-
-.r3 {
-  background-color: #f0a8d8;
+#stats > div:nth-child(3) {
+  background-color: #a8e3f0;
 }
-
-.r4 {
-  background-color: #a8ecf0;
+#stats > div:nth-child(4) {
+  background-color: #eda8f0;
 }
-
-.r5 {
-  background-color: #a8bcf0;
+#stats > div:nth-child(5) {
+  background-color: #f0a8cc;
 }
-
-.r6 {
-  background-color: #e9f0a8;
+#stats > div:nth-child(6) {
+  background-color: #a8c9f0;
 }
-
-.r7 {
-  background-color: #f0a8da;
+#stats > div:nth-child(7) {
+  background-color: #b9a8f0;
 }
 
 #Download {
