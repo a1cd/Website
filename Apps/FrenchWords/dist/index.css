@@ -10,7 +10,7 @@
   left: 50%;
   transform: translate(-50%, 0);
   text-align: center;
-  font-size: 5em;
+  font-size: 3cm;
 }
 
 #Logo {
@@ -22,6 +22,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, 0);
+  border-radius: 15%;
 }
 
 body {
@@ -52,7 +53,7 @@ body {
   background: hotpink;
   flex-wrap: wrap;
   display: flex;
-  flex-basis: auto;
+  flex-basis: content;
   transition: "all 0.5s";
   padding-bottom: 3em;
   padding-top: 3em;
@@ -75,7 +76,7 @@ body {
 }
 
 #stats > div {
-  font-size: 1cm;
+  font-size: 7mm;
   padding: 1em;
   margin: 1.1em;
   transform: rotateX(51deg) rotateZ(20deg);
@@ -83,35 +84,31 @@ body {
   border-radius: 32px;
   box-shadow: 1px 1px 0 1px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01), 28px 28px 28px 0 rgba(34, 33, 81, 0.25);
   transition: 0.4s ease-in-out transform, 0.4s ease-in-out box-shadow;
-  transition: opacity 10s;
-}
-#stats > div::before {
-  opacity: 0;
 }
 #stats > div:hover {
   transform: translate3d(0px, -16px, 0px) rotateX(42deg) rotateZ(0deg);
   box-shadow: 0px 2.5px 0px 0px #f9f9fb, -1px 0 28px 0 rgba(0, 33, 81, 0.01), 54px 54px 28px -10px rgba(34, 33, 81, 0.15);
 }
 #stats > div:nth-child(1) {
-  background-color: #a8aaf0;
+  background-color: #f0a8bc;
 }
 #stats > div:nth-child(2) {
-  background-color: #a8f0de;
+  background-color: #f0c5a8;
 }
 #stats > div:nth-child(3) {
-  background-color: #a8e3f0;
+  background-color: #f0c6a8;
 }
 #stats > div:nth-child(4) {
-  background-color: #eda8f0;
-}
-#stats > div:nth-child(5) {
   background-color: #f0a8cc;
 }
+#stats > div:nth-child(5) {
+  background-color: #acf0a8;
+}
 #stats > div:nth-child(6) {
-  background-color: #a8c9f0;
+  background-color: #f0a8b0;
 }
 #stats > div:nth-child(7) {
-  background-color: #b9a8f0;
+  background-color: #bda8f0;
 }
 
 #Download {

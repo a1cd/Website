@@ -10,13 +10,14 @@
     padding: 15mm
     @include center()
     text-align: center
-    font-size: 5em
+    font-size: 3cm
 #Logo
     max-width: 15vw
     max-height: 40vh
     border: clear
     border-width: 2px
     @include center()
+    border-radius: 15%
 body
     background: hotpink
 *
@@ -42,7 +43,7 @@ body
     background: hotpink
     flex-wrap: wrap
     display: flex
-    flex-basis: auto
+    flex-basis: content
     transition: "all 0.5s"
     padding-bottom: 3em
     padding-top: 3em
@@ -57,7 +58,7 @@ body
 @mixin RandomPastel()
     background-color: hsl((360 * random()),70%, 80%)
 #stats > div
-    font-size: 1cm
+    font-size: 7mm
     padding: 1em
     margin: 1.1em
     transform: rotateX(51deg) rotateZ(20deg)
@@ -66,10 +67,7 @@ body
     box-shadow: 1px 1px 0 1px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01), 28px 28px 28px 0 rgba(34, 33, 81, 0.25)
     transition: .4s ease-in-out transform, .4s ease-in-out box-shadow 
     fillAssurance
-    transition: opacity 10s
-    &::before
-        opacity: 0
-    &:hover 
+    &:hover
         transform: translate3d(0px, -16px, 0px) rotateX(42deg) rotateZ(0deg)
         box-shadow: 0px 2.5px 0px 0px #f9f9fb, -1px 0 28px 0 rgba(0, 33, 81, 0.01), 54px 54px 28px -10px rgba(34, 33, 81, 0.15)
     &:nth-child(1)
