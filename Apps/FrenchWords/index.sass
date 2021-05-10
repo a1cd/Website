@@ -1,25 +1,23 @@
+html
+    margin: 0
 *
     margin: 0
 @mixin center()
     position: relative
-    top: 50%
-    left: 50%
     transform: translate(-50%, 0)
 #Title
     color: azure
-    padding: 15mm
-    @include center()
+    padding: 1vw
     text-align: center
-    font-size: 3cm
+    font-size: 15vw
 #Logo
     max-width: 15vw
     max-height: 40vh
     border: clear
     border-width: 2px
-    @include center()
     border-radius: 15%
 body
-    background: hotpink
+    background: linear-gradient(hotPink)
 *
     font-family: 'SF Pro Text',-apple-system,BlinkMacSystemFont,Roboto,'Segoe UI',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol'
     transition: cubic-bezier(0.39, -0.11, 0.54, 1.22)
@@ -29,7 +27,8 @@ body
     padding: 0
     margin: 0
 #titleArea
-    padding: 5em
+    padding: 10vw
+    max-width: 10em
 
 @mixin statText
     background: linear-gradient(90deg, steelblue, dodgerblue)
@@ -67,6 +66,8 @@ body
     box-shadow: 1px 1px 0 1px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01), 28px 28px 28px 0 rgba(34, 33, 81, 0.25)
     transition: .4s ease-in-out transform, .4s ease-in-out box-shadow 
     fillAssurance
+    &::focus-view
+        opacity: 0
     &:hover
         transform: translate3d(0px, -16px, 0px) rotateX(42deg) rotateZ(0deg)
         box-shadow: 0px 2.5px 0px 0px #f9f9fb, -1px 0 28px 0 rgba(0, 33, 81, 0.01), 54px 54px 28px -10px rgba(34, 33, 81, 0.15)

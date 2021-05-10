@@ -1,16 +1,16 @@
+html {
+  margin: 0;
+}
+
 * {
   margin: 0;
 }
 
 #Title {
   color: azure;
-  padding: 15mm;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 0);
+  padding: 1vw;
   text-align: center;
-  font-size: 3cm;
+  font-size: 15vw;
 }
 
 #Logo {
@@ -18,15 +18,11 @@
   max-height: 40vh;
   border: clear;
   border-width: 2px;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 0);
   border-radius: 15%;
 }
 
 body {
-  background: hotpink;
+  background: linear-gradient(hotPink);
 }
 
 * {
@@ -42,7 +38,8 @@ body {
 }
 
 #titleArea {
-  padding: 5em;
+  padding: 10vw;
+  max-width: 10em;
 }
 
 .spacingGroup {
@@ -85,30 +82,33 @@ body {
   box-shadow: 1px 1px 0 1px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01), 28px 28px 28px 0 rgba(34, 33, 81, 0.25);
   transition: 0.4s ease-in-out transform, 0.4s ease-in-out box-shadow;
 }
+#stats > div::focus-view {
+  opacity: 0;
+}
 #stats > div:hover {
   transform: translate3d(0px, -16px, 0px) rotateX(42deg) rotateZ(0deg);
   box-shadow: 0px 2.5px 0px 0px #f9f9fb, -1px 0 28px 0 rgba(0, 33, 81, 0.01), 54px 54px 28px -10px rgba(34, 33, 81, 0.15);
 }
 #stats > div:nth-child(1) {
-  background-color: #f0a8bc;
+  background-color: #f0a8d7;
 }
 #stats > div:nth-child(2) {
-  background-color: #f0c5a8;
+  background-color: #a8f0e9;
 }
 #stats > div:nth-child(3) {
-  background-color: #f0c6a8;
+  background-color: #f0a8d4;
 }
 #stats > div:nth-child(4) {
-  background-color: #f0a8cc;
+  background-color: #a8f0b7;
 }
 #stats > div:nth-child(5) {
-  background-color: #acf0a8;
+  background-color: #d2f0a8;
 }
 #stats > div:nth-child(6) {
-  background-color: #f0a8b0;
+  background-color: #f0a8dc;
 }
 #stats > div:nth-child(7) {
-  background-color: #bda8f0;
+  background-color: #a8bbf0;
 }
 
 #Download {
