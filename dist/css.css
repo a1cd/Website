@@ -1,33 +1,32 @@
-@import url(//db.onlinewebfonts.com/c/88eb29785b94842f7b48a3050e2c96f9?family=Flux);
-@font-face {font-family: "Flux"; src: url("//db.onlinewebfonts.com/t/88eb29785b94842f7b48a3050e2c96f9.eot"); src: url("//db.onlinewebfonts.com/t/88eb29785b94842f7b48a3050e2c96f9.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/88eb29785b94842f7b48a3050e2c96f9.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/88eb29785b94842f7b48a3050e2c96f9.woff") format("woff"), url("//db.onlinewebfonts.com/t/88eb29785b94842f7b48a3050e2c96f9.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/88eb29785b94842f7b48a3050e2c96f9.svg#Flux") format("svg"); }
-
-a.button6{
-   display:inline-block;
-   padding:0.7em 1.4em;
-   margin:0 0.3em 0.3em 0;
-   border-radius:0.15em;
-   box-sizing: border-box;
-   text-decoration:none;
-   font-family:'Roboto',sans-serif;
-   text-transform:uppercase;
-   font-weight:400;
-   color:#FFFFFF;
-   background-color:#3369ff;
-   box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
-   text-align:center;
-   position:fixed;
-  }
-  a.button6:active{
-   top:0.1em;
-  }
-  @media all and (max-width:30em){
-   a.button6{
-    display:block;
-    margin:0.4em auto;
-   }
+@charset "UTF-8";
+@import "//db.onlinewebfonts.com/c/88eb29785b94842f7b48a3050e2c96f9?family=Flux";
+@font-face {
+  font-family: "Flux";
+  src: url("//db.onlinewebfonts.com/t/88eb29785b94842f7b48a3050e2c96f9.eot");
+  src: url("//db.onlinewebfonts.com/t/88eb29785b94842f7b48a3050e2c96f9.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/88eb29785b94842f7b48a3050e2c96f9.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/88eb29785b94842f7b48a3050e2c96f9.woff") format("woff"), url("//db.onlinewebfonts.com/t/88eb29785b94842f7b48a3050e2c96f9.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/88eb29785b94842f7b48a3050e2c96f9.svg#Flux") format("svg");
 }
+a.button6 {
+   display: inline-block;
+   padding: 0.7em 1.4em;
+   margin: 0 0.3em 0.3em 0;
+   border-radius: 0.15em;
+   box-sizing: border-box;
+   text-decoration: none;
+   font-family: "Roboto", sans-serif;
+   text-transform: uppercase;
+   font-weight: 400;
+   color: #FFFFFF;
+   background-color: #3369ff;
+   box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
+   text-align: center;
+   position: fixed;
+}
+a.button6:active {
+   top: 0.1em;
+}
+
 * {
-  font-family: 'SF Pro Text',-apple-system,BlinkMacSystemFont,Roboto,'Segoe UI',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+  font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   margin: 0;
   transition: transform 0.5s;
   cursor: default;
@@ -46,11 +45,6 @@ a.button6{
   color: white;
   padding: 1cm;
   margin: 0;
-  /* background-color: var(--first); */
-  /* background: radial-gradient(ellipse at 0% 0%, rgba(8, 0, 255, 0.33) 0%, transparent 67%), linear-gradient(210.71deg, rgba(128, 0, 255, 0.28) 0%, transparent 100%), radial-gradient(ellipse at 93% 91%, rgba(255, 0, 136, 0.4) 0%, transparent 100%), radial-gradient(ellipse at 50% 50%, #000 0%, #000 100%) */
-  /* background-blend-mode: normal, normal, normal, normal */
-  /* filter: blur(100); */
-  /* box-shadow: 0px 2px 6px var(--first); */
   z-index: 2;
   position: relative;
 }
@@ -67,49 +61,45 @@ a.button6{
   padding: 4mm;
   column-count: 2;
   column-gap: 5%;
-}
-
-.subdividers {
-  columns: unset;
-  text-align: start;
-}
-
-.subdividers > p, .subdividers > h2 {
-  padding: 2vw;
-  perspective-origin: 50% 50%;
-}
-
-.subtitle {
-  /* Full screen width and height */
   width: 100%;
   min-height: 60vh;
-  /* Centers the container in the middle of the screen */
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
 }
 .subtitle #imageHolder {
-  /* This will come into play later */
   perspective: 40px;
 }
 .subtitle #mouseImage {
   width: 20vw;
-  /* height: 8rem; */
   position: relative;
   transform: rotateX(0) rotateY(0);
+}
+
+.subdividers {
+  columns: unset;
+  text-align: start;
+}
+.subdividers > p {
+  padding: 2vw;
+  perspective-origin: 50% 50%;
+}
+.subdividers > h2 {
+  padding: 2vw;
+  perspective-origin: 50% 50%;
 }
 
 .spacer {
   height: 135px;
   position: unset;
 }
+
 .coolSection {
   min-height: 50vh;
   width: 100vw;
   background: cornflowerblue;
-  background: linear-gradient(180deg, cornflowerblue 0%, rgba(76,113,213) 13%, rgba(29,43,167) 87%, darkblue 100%);
-  /* z-index: 1; */
+  background: linear-gradient(180deg, cornflowerblue 0%, #4c71d5 13%, #1d2ba7 87%, darkblue 100%);
 }
 
 .Transition {
@@ -119,7 +109,15 @@ a.button6{
   width: 100%;
   position: absolute;
 }
+
 .transitionWave {
   height: 100px;
   width: 100%;
+}
+
+@media all and (max-width: 30em) {
+   a.button6 {
+      display: block;
+      margin: 0.4em auto;
+  }
 }

@@ -1,4 +1,84 @@
+@keyframes loadBlurbox {
+  0% {
+    transform: translate3d(0px, 0px, -50px) perspective(2500px) rotateY(25deg) scale(1) rotateX(10deg);
+    filter: blur(10px);
+    opacity: 0.5;
+    transition: 0.6s ease all;
+  }
+  50% {
+    transform: translate3d(0px, 0px, -40px) perspective(2000px) rotateY(25deg) scale(1) rotateX(10deg);
+    filter: blur(10px);
+    opacity: 0.5;
+    transition: 0.6s ease all;
+  }
+  100% {
+    transform: translate3d(0px, 0px, -16px) perspective(800px) rotateY(-15deg) translateY(-50px) rotateX(10deg) scale(1);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes loadTransitionHtml {
+  0% {
+    background-color: slategrey;
+    background: radial-gradient(circle at center, red 0, blue, green 100%);
+    transform: rotateZ(180);
+  }
+  10% {
+    background-color: slategrey;
+    background: radial-gradient(circle at center, red 0, blue, green 100%);
+  }
+  66% {
+    background-color: slategrey;
+    background: radial-gradient(circle at center, red 0, blue, green 100%);
+  }
+  100% {
+    background: hotpink;
+  }
+}
+@keyframes loadTransitionBody {
+  0% {
+    opacity: 0;
+    background: radial-gradient(circle at center, deepskyblue 0% 1%, blue 1.3%);
+  }
+  10% {
+    background: radial-gradient(circle at center, deepskyblue 0% 1%, blue 1.3%);
+  }
+  50% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 1;
+    filter: blur(40px);
+  }
+  100% {
+    background: white;
+    filter: blur(0px);
+  }
+  0% {
+    background-position: 0px 100px;
+  }
+  7.5% {
+    background-position: 100px 0px;
+  }
+  15% {
+    background-position: 0px -100px;
+  }
+  22.5% {
+    background-position: -100px 0px;
+  }
+  30% {
+    background-position: 0px 100px;
+  }
+  37.5% {
+    background-position: 0px 0px;
+  }
+}
 html {
+  animation: 5s ease-out 0s 1 loadTransition;
+}
+
+body {
+  animation: 5s ease-out 0s 1 loadTransitionBody;
   margin: 0;
 }
 
@@ -17,17 +97,23 @@ html {
 }
 
 #Logo {
+  animation: 7s ease-out 0s 1 loadBlurbox;
+  transform: translate3d(0px, 0px, -16px) perspective(800px) rotateY(-15deg) translateY(-50px) rotateX(10deg) scale(1);
+  filter: blur(0);
+  opacity: 1;
   max-width: 25vw;
   max-height: 40vh;
   border: clear;
   border-width: 2px;
   border-radius: 15%;
+  margin-top: 3vw;
+  margin-bottom: -3vw;
 }
 
 body {
+  filter: blur();
   background: linear-gradient(royalblue -10% 50%, hotPink 50% 1000%);
 }
-
 * {
   font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   transition: cubic-bezier(0.39, -0.11, 0.54, 1.22);
@@ -86,33 +172,30 @@ body {
   box-shadow: 1px 1px 0 1px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01), 28px 28px 28px 0 rgba(34, 33, 81, 0.25);
   transition: 0.4s ease-in-out transform, 0.4s ease-in-out box-shadow;
 }
-#stats > div::focus-view {
-  opacity: 0;
-}
 #stats > div:hover {
   transform: translate3d(0px, -16px, 0px) rotateX(42deg) rotateZ(0deg);
   box-shadow: 0px 2.5px 0px 0px #f9f9fb, -1px 0 28px 0 rgba(0, 33, 81, 0.01), 54px 54px 28px -10px rgba(34, 33, 81, 0.15);
 }
 #stats > div:nth-child(1) {
-  background-color: #baa8f0;
+  background-color: #a8cef0;
 }
 #stats > div:nth-child(2) {
-  background-color: #a8c7f0;
+  background-color: #f0b5a8;
 }
 #stats > div:nth-child(3) {
-  background-color: #f0e6a8;
+  background-color: #a8f0cb;
 }
 #stats > div:nth-child(4) {
-  background-color: #f0a8ca;
+  background-color: #a8b6f0;
 }
 #stats > div:nth-child(5) {
-  background-color: #adf0a8;
+  background-color: #a8def0;
 }
 #stats > div:nth-child(6) {
-  background-color: #def0a8;
+  background-color: #d1a8f0;
 }
 #stats > div:nth-child(7) {
-  background-color: #f0a8b8;
+  background-color: #eaa8f0;
 }
 
 #Download {
