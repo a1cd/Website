@@ -1,25 +1,37 @@
-@mixin coolBoxThing($Multiplier)
+@keyframes shine 
+    to 
+        background-position-x: -200%
+
+@mixin coolBoxThing($Multiplier, $background, $angle1, $angle2)
     padding: 1em * $Multiplier
     margin: 1.1em * $Multiplier
-    transform: rotateX(51deg) rotateZ(20deg)
+    transform: rotateX(51deg) rotateZ($angle1)
     transform-style: preserve-3d
     border-radius: 32px * $Multiplier
     box-shadow: 1px 1px 0 1px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01), 28px 28px 28px 0 rgba(34, 33, 81, 0.25)
-    transition: .4s ease-in-out transform, .4s ease-in-out box-shadow 
+    transition: .4s ease-in-out transform, .4s ease-in-out box-shadow//, 0.7s ease-in-out all
+    background-position-x: -800px
+    background-origin: border-box
+    background-repeat: no-repeat
+    background: $background
+    // background: linear-gradient(65deg, $background -100% 38%, #f5f5f5 48%, $background 53% 200%)
     fillAssurance
+    // background-size: 200%
     &:hover
-        transform: translate3d(0px, -16px, 0px) rotateX(42deg) rotateZ(0deg)
+        transform: translate3d(0px, -16px, 0px) rotateX(42deg) rotateZ($angle2)
         box-shadow: 0px 2.5px 0px 0px #f9f9fb, -1px 0 28px 0 rgba(0, 33, 81, 0.01), 54px 54px 28px -10px rgba(34, 33, 81, 0.15)
+        background-position-x: +200px
+        // background-size: 200%
 
 @keyframes loadBlurbox
     0% 
         transform: translate3d(0px, 0px, -50px) perspective(2500px * 1) rotateY(25deg) scale(1) rotateX(10deg)
-        filter: blur(10px)
+        // filter: blur(10px)
         opacity: 0.5
         transition: 0.6s ease all
     50% 
         transform: translate3d(0px, 0px, -40px) perspective(2000px * 1) rotateY(250deg) scale(1) rotateX(-30deg)
-        filter: blur(10px)
+        // filter: blur(10px)
         opacity: 0.5
         transition: 0.6s ease all
     100% 
@@ -27,7 +39,7 @@
         filter: blur(0)
         opacity: 1
 @mixin BlurBox($Blur, $ScaleSmall, $PersSmall, $PersFull)
-    animation: 7s ease-out 0s 1 loadBlurbox
+    animation: 7s ease 0s 1 loadBlurbox
     transform: translate3d(0px, 0px, -16px) perspective(800px * 1) rotateY(-15deg) translateY(-50px) rotateX(10deg) scale(1)
     filter: blur(0)
     opacity: 1
@@ -129,9 +141,11 @@ body
 .spacingGroup
     padding: 1em
 
-@mixin RandomPastel()
-    $random: (360 * random())
-    return hsl($random,70%, 80%)
+@function RandomPastel($is)
+    @if $is
+        @return hsl((360 * random()),60%, 30%, 1)
+    @else 
+        @return hsl((360 * random()),70%, 80%, 1)
 
 
 #stats
@@ -145,63 +159,67 @@ body
     padding-top: 3em
     p
         &:nth-child(1)
-            @include statText(RandomPastel(), RandomPastel())
+            @include statText(RandomPastel(true), RandomPastel(true))
         &:nth-child(2)
-            @include statText(RandomPastel(), RandomPastel())
+            @include statText(RandomPastel(true), RandomPastel(true))
         &:nth-child(3)
-            @include statText(RandomPastel(), RandomPastel())
+            @include statText(RandomPastel(true), RandomPastel(true))
         &:nth-child(4)
-            @include statText(RandomPastel(), RandomPastel())
+            @include statText(RandomPastel(true), RandomPastel(true))
         &:nth-child(5)
-            @include statText(RandomPastel(), RandomPastel())
+            @include statText(RandomPastel(true), RandomPastel(true))
         word-wrap: break-word
     h2
-        @include statText(RandomPastel(), RandomPastel())
+        @include statText(RandomPastel(true), RandomPastel(true))
         &:nth-child(1)
-            @include statText(RandomPastel(), RandomPastel())
+            @include statText(RandomPastel(true), RandomPastel(true))
         &:nth-child(2)
-            @include statText(RandomPastel(), RandomPastel())
+            @include statText(RandomPastel(true), RandomPastel(true))
         &:nth-child(3)
-            @include statText(RandomPastel(), RandomPastel())
+            @include statText(RandomPastel(true), RandomPastel(true))
         &:nth-child(4)
-            @include statText(RandomPastel(), RandomPastel())
+            @include statText(RandomPastel(true), RandomPastel(true))
         &:nth-child(5)
-            @include statText(RandomPastel(), RandomPastel())
+            @include statText(RandomPastel(true), RandomPastel(true))
     li
         @include statText(dogerblue, steelblue)
         &:nth-child(1)
-            @include statText(RandomPastel(), RandomPastel())
+            @include statText(RandomPastel(true), RandomPastel(true))
         &:nth-child(2)
-            @include statText(RandomPastel(), RandomPastel())
+            @include statText(RandomPastel(true), RandomPastel(true))
         &:nth-child(3)
-            @include statText(RandomPastel(), RandomPastel())
+            @include statText(RandomPastel(true), RandomPastel(true))
         &:nth-child(4)
-            @include statText(RandomPastel(), RandomPastel())
+            @include statText(RandomPastel(true), RandomPastel(true))
         &:nth-child(5)
-            @include statText(RandomPastel(), RandomPastel())
+            @include statText(RandomPastel(true), RandomPastel(true))
 
-$randomL: 0
-@mixin RandomPastel()
-    $random: (360 * random())
-    background-color: hsl($random,70%, 80%)
-    
+// $randomL: 0
+// @mixin RandomPastel()
+//     $random: (360 * random())
+//     background-color: hsl($random,70%, 80%)
+@function randomAngle($angles)
+    @return (random() * $angles) - ($angles/2) + 42
+@mixin nthChildRepeat()
+    &:nth-child(1)
+        @include coolBoxThing(1, RandomPastel(false), 20deg, 0)
+    &:nth-child(2)
+        @include coolBoxThing(1, RandomPastel(false), 42deg, 0)
+    &:nth-child(3)
+        @include coolBoxThing(1, RandomPastel(false), randomAngle(10deg), 0)
+    &:nth-child(4)
+        @include coolBoxThing(1, RandomPastel(false), randomAngle(10deg), 0)
+    &:nth-child(5)
+        @include coolBoxThing(1, RandomPastel(false), randomAngle(10deg), 0)
+    &:nth-child(6)
+        @include coolBoxThing(1, RandomPastel(false), randomAngle(10deg), 0)
+    &:nth-child(7)
+        @include coolBoxThing(1, RandomPastel(false), randomAngle(10deg), 0)
 #stats > div
     font-size: 7mm
-    @include coolBoxThing(1)
-    &:nth-child(1)
-        @include RandomPastel()
-    &:nth-child(2)
-        @include RandomPastel()
-    &:nth-child(3)
-        @include RandomPastel()
-    &:nth-child(4)
-        @include RandomPastel()
-    &:nth-child(5)
-        @include RandomPastel()
-    &:nth-child(6)
-        @include RandomPastel()
-    &:nth-child(7)
-        @include RandomPastel()
+    @include coolBoxThing(1, RandomPastel(false), randomAngle(180deg), 0)
+    @include nthChildRepeat()
+    
 
 #Download
     color: grey
