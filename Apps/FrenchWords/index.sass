@@ -1,7 +1,12 @@
+@import submitbutton.sass
 @keyframes shine 
     to 
         background-position-x: -200%
-
+@mixin BoxThingStreighten($angle2)
+    transform: translate3d(0px, -16px, 0px) rotateX(42deg) rotateZ($angle2)
+    box-shadow: 0px 2.5px 0px 0px #f9f9fb, -1px 0 28px 0 rgba(0, 33, 81, 0.01), 54px 54px 28px -10px rgba(34, 33, 81, 0.15)
+    background-position-x: +200px
+    // background-size: 200%
 @mixin coolBoxThing($Multiplier, $background, $angle1, $angle2)
     padding: 1em * $Multiplier
     margin: 1.1em * $Multiplier
@@ -18,10 +23,9 @@
     fillAssurance
     // background-size: 200%
     &:hover
-        transform: translate3d(0px, -16px, 0px) rotateX(42deg) rotateZ($angle2)
-        box-shadow: 0px 2.5px 0px 0px #f9f9fb, -1px 0 28px 0 rgba(0, 33, 81, 0.01), 54px 54px 28px -10px rgba(34, 33, 81, 0.15)
-        background-position-x: +200px
-        // background-size: 200%
+        @include BoxThingStreighten($angle2)
+    &*:focus
+        @include BoxThingStreighten($angle2)
 
 @keyframes loadBlurbox
     0% 
@@ -30,7 +34,7 @@
         opacity: 0.5
         transition: 0.6s ease all
     50% 
-        transform: translate3d(0px, 0px, -40px) perspective(2000px * 1) rotateY(250deg) scale(1) rotateX(-30deg)
+        transform: translate3d(0px, 0px, -40px) perspective(2000px * 1) rotateY(250deg) scale(1) rotateX(180deg)
         // filter: blur(10px)
         opacity: 0.5
         transition: 0.6s ease all
@@ -39,7 +43,7 @@
         filter: blur(0)
         opacity: 1
 @mixin BlurBox($Blur, $ScaleSmall, $PersSmall, $PersFull)
-    animation: 7s ease 0s 1 loadBlurbox
+    animation: 7s cubic-bezier(0.22, 0.61, 0.35, 0.94) 0s 1 loadBlurbox
     transform: translate3d(0px, 0px, -16px) perspective(800px * 1) rotateY(-15deg) translateY(-50px) rotateX(10deg) scale(1)
     filter: blur(0)
     opacity: 1
@@ -86,13 +90,12 @@
     37.5%
         background-position: 0px 0px
     
-
 html
     // background: hotpink
     // animation: 5s ease-out 0s 1 loadTransitionHtml
 body
     // background: hotpink
-    animation: 5s ease-out 0s 1 loadTransitionBody
+    // animation: 5s ease-out 0s 1 loadTransitionBody
     margin: 0
 *
     margin: 0
@@ -202,9 +205,9 @@ body
     @return (random() * $angles) - ($angles/2) + 42
 @mixin nthChildRepeat()
     &:nth-child(1)
-        @include coolBoxThing(1, RandomPastel(false), 20deg, 0)
+        @include coolBoxThing(1, RandomPastel(false), randomAngle(10deg), 0)
     &:nth-child(2)
-        @include coolBoxThing(1, RandomPastel(false), 42deg, 0)
+        @include coolBoxThing(1, RandomPastel(false), randomAngle(10deg), 0)
     &:nth-child(3)
         @include coolBoxThing(1, RandomPastel(false), randomAngle(10deg), 0)
     &:nth-child(4)
@@ -219,7 +222,6 @@ body
     font-size: 7mm
     @include coolBoxThing(1, RandomPastel(false), randomAngle(180deg), 0)
     @include nthChildRepeat()
-    
 
 #Download
     color: grey

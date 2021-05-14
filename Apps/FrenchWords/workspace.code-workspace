@@ -1,0 +1,24 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"svg.preview.background": "transparent",
+		"compile-hero.disable-compile-files-on-did-save-code": false,
+		"editor.suggest.showStatusBar": true,
+		"compile-hero.generate-minified-javascript": true,
+		"compile-hero.generate-minified-css": true,
+		"compile-hero.javascript-output-directory": "./code",
+		"window.autoDetectColorScheme": true,
+		"emojisense.markupCompletionsEnabled": false,
+		"cSpell.enableFiletypes": [
+			"editorconfig",
+			"kotlin",
+			"sass",
+			"swift",
+			"xml"
+		],
+	}
+}

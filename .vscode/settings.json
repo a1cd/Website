@@ -1,4 +1,25 @@
 {
+    "[javascript]": {
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": false,
+            "strings": false
+        },
+        "javascript.suggest"
+    },
+    "editor.suggest.showStatusBar": true,
+    "editor.suggest.showVariables": true,
+    "editor.suggest.showVariables": true,
+    "editor.suggest.showVariables": true,
+    "editor.suggest.": true,
+    "editor.suggest.showVariables": true,
     "svg.preview.background": "transparent",
-    "compile-hero.disable-compile-files-on-did-save-code": false
+    "compile-hero.disable-compile-files-on-did-save-code": false,
+    "editor.quickSuggestions": true,
+    "editor.formatOnPaste": true,
+    "editor.tabCompletion": "on",
+    "breadcrumbs.showArrays": true,
+    "breadcrumbs.showVariables": true,
+    "editor.wordBasedSuggestionsMode": "allDocuments",
+    "editor.suggest.showWords": false
 }
