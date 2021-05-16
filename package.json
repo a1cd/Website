@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/a1cd/Website#readme",
   "dependencies": {
-    "particles.js": "^2.0.0",
     "tsparticles": "^1.27.0"
   }
 }
