@@ -1,9 +1,6 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
+<html id="particles-js">
+    
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,15 +8,22 @@
         <meta name="description" content="How to download my change in veracross">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="sass/dist/index.min.css">
+        <link rel="stylesheet" href="./dist/style.min.css" />
+        <script src="dist/resizeIframes.dev.js"></script>
     </head>
     <body>
-        <h1>Veracross</h1>
-        <h2>An Update</h2>
-        <iframe id="frame" frameborder="0" class="juxtapose" width="100%" height="340.46718749999997" src="./thing.html"></iframe>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        
-        <script src="" async defer></script>
+		<div class="heading">
+			<h1>Tweaking Veracross</h1>
+			<h3>It has changed</h3>
+		</div>
+        <iframe frameborder="0" class="juxtapose" width="100%" max-height="100vmin" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=d6bd8554-b5f8-11eb-b7bf-95443c729a29"></iframe>
+        <div id="background"></div>
+        <!-- Import Particles.js and app.js files -->
+        <script src=
+            "../../node_modules/particles.js/particles.js">
+        </script>
+        <script src=
+            "./background.js">
+        </script>
     </body>
 </html>
