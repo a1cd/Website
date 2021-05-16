@@ -16,7 +16,7 @@ particlesJS.load('particles-js', 'particles.json', function() {
 particlesJS('background', {
   "particles": {
     "number": {
-      "value": 100,
+      "value": 50,
       "density": {
         "enable": true,
         "value_area": 800

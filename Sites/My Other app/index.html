@@ -17,6 +17,12 @@
 			<h3>It has changed</h3>
 		</div>
         <iframe frameborder="0" class="juxtapose" width="100%" max-height="100vmin" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=d6bd8554-b5f8-11eb-b7bf-95443c729a29"></iframe>
+        <div class="button">
+            Download it!
+            <span>
+                <span></span>
+            </span>
+        </div>
         <div id="background"></div>
         <!-- Import Particles.js and app.js files -->
         <script src=
@@ -25,5 +31,31 @@
         <script src=
             "./background.js">
         </script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyAtUTJTg8yvpLXLlxQpPWTwzQSvM6Mfjag",
+            authDomain: "a2cd-d2271.firebaseapp.com",
+            projectId: "a2cd-d2271",
+            storageBucket: "a2cd-d2271.appspot.com",
+            messagingSenderId: "892303226846",
+            appId: "1:892303226846:web:adf3f9751273ef739e8f4f",
+            measurementId: "G-FFJLKXZ9SR"
+        };
+        // Initialize Firebase
+        //firebase.initializeApp(firebaseConfig);
+        //firebase.analytics();
+    </script> 
+    <!-- <script data-main="scripts/" src="scripts/require.js"></script> -->
+    <!-- <script type="module" src="dist/index.dev.js"></script> -->
+    <script src="index.js"></script>
     </body>
 </html>
