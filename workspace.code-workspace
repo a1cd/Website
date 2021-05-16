@@ -6,6 +6,9 @@
 	],
 	"settings": {
 		"workbench.settings.editor": "ui",
-		"files.autoSave": "afterDelay"
+		"files.autoSave": "afterDelay",
+		"compile-hero.disable-compile-files-on-did-save-code": false,
+		"compile-hero.generate-minified-html-only": true,
+		"compile-hero.generate-minified-css": true
 	}
 }
